@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFX_files.controllers.Program_Controller">
+   <children>
+      <TabPane layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="712.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Scientist">
+            <content>
+                  <Pane prefWidth="675.0">
+                     <children>
+                        <TextField fx:id="tfScnName" layoutX="32.0" layoutY="-57.0" translateX="100" translateY="100" />
+                        <TextField fx:id="tfScnSurname" layoutX="132.0" layoutY="83.0" />
+                        <TextField fx:id="tfScnCountry" layoutX="132.0" layoutY="127.0" />
+                         <TextField fx:id="tfScnBirthDate" layoutX="132.0" layoutY="165.0" />
+                         <TextField fx:id="tfScnDeathDate" layoutX="132.0" layoutY="220.0" />
+                         <Label fx:id="LBnameSCN" layoutX="25.0" layoutY="47.0" text="Name:" textFill="#00c60e" />
+                         <Label fx:id="LBsurnameSCN" layoutX="25.0" layoutY="87.0" text="Surname:" textFill="#00c60e" />
+                         <Label fx:id="LBcountrySCN" layoutX="25.0" layoutY="131.0" text="Country:" textFill="#00c60e" />
+                         <Label fx:id="LBBirthDateSCN" layoutX="25.0" layoutY="177.0" text="BirthDate:" textFill="#00c60e" />
+                        <Label fx:id="LBdeathDateSCN" layoutX="27.0" layoutY="224.0" text="DeathDate:" textFill="#00c60e" />
+                        <Button fx:id="BTNaddScientist" layoutX="41.0" layoutY="267.0" mnemonicParsing="false" onAction="#AddScientist" text="AddScientist" textFill="#00c60e" />
+                        <Button fx:id="BTNinfoSCN" layoutX="177.0" layoutY="267.0" mnemonicParsing="false" onAction="#SCgetInfo" text="Get Info" textFill="#00c60e" />
+                     </children>
+                  </Pane>
+            </content>
+          </Tab>
+          <Tab text="University">
+            <content>
+              <Pane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="tfUnName" layoutX="114.0" layoutY="30.0" />
+                        <TextField fx:id="tfUnCountry" layoutX="114.0" layoutY="72.0" />
+                        <TextField fx:id="tfUnCity" layoutX="114.0" layoutY="117.0" />
+                        <Label fx:id="LBnameUNIV" layoutX="14.0" layoutY="34.0" text="Name:" textFill="#08b2ff" />
+                        <Label fx:id="LBcountryUNIV" layoutX="14.0" layoutY="76.0" text="Country:" textFill="#08b2ff" />
+                        <Label fx:id="LBcityUNIV" layoutX="14.0" layoutY="121.0" text="City:" textFill="#08b2ff" />
+                        <Button fx:id="BTNaddUNIV" layoutX="33.0" layoutY="173.0" mnemonicParsing="false" onAction="#AddUniversity" text="Add University" textFill="#08b2ff" />
+                        <Button fx:id="BTNinfoUNIV" layoutX="37.0" layoutY="224.0" mnemonicParsing="false" onAction="#UNgetInfo" text="Get Info" textFill="#08b2ff" />
+                     </children>
+                  </Pane>
+            </content>
+          </Tab>
+      
+           <Tab text="Study">
+            <content>
+              <Pane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="tfLEARNunID" layoutX="124.0" layoutY="30.0" />
+                        <TextField fx:id="tfLEARNscnID" layoutX="124.0" layoutY="72.0" />
+                        <Label fx:id="LBunIDstudy" layoutX="14.0" layoutY="34.0" text="UniversityID:" textFill="#f800ff" />
+                        <Label fx:id="LBscnIDstudy" layoutX="14.0" layoutY="76.0" text="ScientistID" textFill="#f800ff" />
+                        <Button fx:id="BTNaddStudy" layoutX="23.0" layoutY="117.0" mnemonicParsing="false" onAction="#AddWhereScientisLearn" text="Add Info" textFill="#f800ff" />
+                        <Button fx:id="BTNinfoStudy" layoutX="24.0" layoutY="164.0" mnemonicParsing="false" onAction="#WSLgetInfo" text="Get Info" textFill="#f800ff" />
+                     </children>
+                  </Pane>
+            </content>
+          </Tab>
+            <Tab text="Teach">
+            <content>
+              <Pane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="tfTOUGHTunID" layoutX="124.0" layoutY="30.0" />
+                        <TextField fx:id="tfTOUGHTscnID" layoutX="124.0" layoutY="72.0" />
+                        <Label fx:id="BTNinfoteach" layoutX="14.0" layoutY="34.0" text="UniversityID:" textFill="#ff075b" />
+                        <Label fx:id="LBscnIDteach" layoutX="14.0" layoutY="76.0" text="ScientistID" textFill="#ff075b" />
+                        <Button fx:id="BTNaddTeach" layoutX="23.0" layoutY="117.0" mnemonicParsing="false" onAction="#AddWhereScientistTought" text="Add Info" textFill="#ff075b" />
+                        <Button fx:id="BTNinfoTeach" layoutX="24.0" layoutY="170.0" mnemonicParsing="false" onAction="#WSTgetInfo" text="Get Info" textFill="#ff075b" />
+                     </children>
+                  </Pane>
+            </content>
+          </Tab>
+            <Tab text="NobelPrizeWinner">
+                <content>
+                    <Pane>
+                        <children>
+                            <TextField fx:id="tfREASONscnID" layoutX="39.0" layoutY="-57.0" translateX="100" translateY="100" />
+                            <TextField fx:id="tfREASONfield" layoutX="139.0" layoutY="83.0" />
+                            <TextField fx:id="tfREASON" layoutX="139.0" layoutY="127.0" />
+                            <TextField fx:id="tfREASONDate" layoutX="139.0" layoutY="173.0" />
+                            <Label fx:id="LBscientistID" layoutX="25.0" layoutY="47.0" text="ScientistID:" textFill="#ff0d00" />
+                            <Label fx:id="LBfield" layoutX="25.0" layoutY="87.0" text="Field:" textFill="#ff0d00" />
+                            <Label fx:id="LBreason" layoutX="25.0" layoutY="131.0" text="Reason:" textFill="#ff0d00" />
+                            <Label fx:id="LBdate" layoutX="25.0" layoutY="177.0" text="Date:" textFill="#ff0d00" />
+                            <Button fx:id="BTNaddNBL" layoutX="52.0" layoutY="217.0" mnemonicParsing="false" onAction="#AddReasonGettingNobelPrize" text="Add Info" textFill="#ff0d00" />
+                        <Button fx:id="BTNinfoNBL" layoutX="54.0" layoutY="268.0" mnemonicParsing="false" onAction="#RGNPgetInfo" text="Get Info" textFill="#ff0d00" />
+                        </children>
+                    </Pane>
+                </content>
+            </Tab>
+            <Tab text="Information">
+                <content>
+                    <Pane>
+                        <TextArea fx:id="taHereInfo" prefHeight="373.0" prefWidth="616.0" />
+                    </Pane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+       <ChoiceBox fx:id="chooseLanguage" layoutY="1.0" onAction="#ChangeLanguage" prefHeight="25.0" prefWidth="43.0" value="Select Language">
+           <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="ru" />
+                   <String fx:value="en" />
+               </FXCollections>
+           </items>
+       </ChoiceBox>
+   </children>
+</Pane>
